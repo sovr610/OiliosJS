@@ -1,0 +1,47 @@
+{
+  "name": "@jarvis-home-automation/oiliosjs",
+  "version": "1.0.0",
+  "description": "A modern JS/TS framework to build powerful and fast websites. Webassembly friedly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests",
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sovr610/OiliosJS.git"
+  },
+  "keywords": [
+    "web",
+    "OiliosJS",
+    "JS",
+    "TS",
+    "webassembly",
+    "C++",
+    "rust",
+    "framework",
+    "library"
+  ],
+  "author": "Parker Bidigare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sovr610/OiliosJS/issues"
+  },
+  "homepage": "https://github.com/sovr610/OiliosJS#readme",
+  "dependencies": {
+    "assemblyscript": "^0.20.15"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.20.15"
+  }
+}
